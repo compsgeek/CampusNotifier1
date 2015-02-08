@@ -1,19 +1,70 @@
 package com.compsgeek.campusnotifier;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 
 public class MainActivity extends ActionBarActivity {
+    private static Button Btn_Register;
+    private static ImageButton student_login;
+    private static ImageButton staff_login;
+    private static ImageButton about_us;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        OnClickButtonListener();
     }
 
+    public void OnClickButtonListener() {
+        Btn_Register = (Button)findViewById(R.id.button);
+        Btn_Register.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent("com.compsgeek.campusnotifier.SecondActivity");
+                        startActivity(intent);
+                    }
+                }
+        );
+        student_login = (ImageButton)findViewById(R.id.StudentButton);
+        student_login.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent("com.compsgeek.campusnotifier.StudentLogin");
+                        startActivity(intent);
+                    }
+                }
+        );
+        staff_login = (ImageButton)findViewById(R.id.StaffButton);
+        staff_login.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent("com.compsgeek.campusnotifier.StaffLogin");
+                        startActivity(intent);
+                    }
+                }
+        );
+        about_us = (ImageButton)findViewById(R.id.AboutUs);
+        about_us.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent("com.compsgeek.campusnotifier.AboutUs");
+                        startActivity(intent);
+                    }
+                }
+        );
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

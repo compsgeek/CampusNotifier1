@@ -16,6 +16,42 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SecondActivity"
+            android:label="@string/title_activity_second" >
+            <intent-filter>
+                <action android:name="com.compsgeek.campusnotifier.SecondActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StudentLogin"
+            android:label="@string/title_activity_student_login" >
+            <intent-filter>
+                <action android:name="com.compsgeek.campusnotifier.StudentLogin" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StaffLogin"
+            android:label="@string/title_activity_staff_login" >
+            <intent-filter>
+                <action android:name="com.compsgeek.campusnotifier.StaffLogin" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AboutUs"
+            android:label="@string/title_activity_about_us" >
+            <intent-filter>
+                <action android:name="com.compsgeek.campusnotifier.AboutUs" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
